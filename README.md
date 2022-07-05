@@ -49,7 +49,7 @@ moneydown : 944666.9820000001
 Final Portfolio Value: 874147.79  
 
 
-using Bollinger Bands    https://www.investopedia.com/articles/technical/102201.asp  
+Bollinger Bands    https://www.investopedia.com/articles/technical/102201.asp  
      ------------------------------ ANALYSIS ------------------------------  
 
 
