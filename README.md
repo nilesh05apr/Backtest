@@ -2,7 +2,7 @@
 
 
 using MACD  
- ------------------------------ ANALYSIS ------------------------------  
+     ------------------------------ ANALYSIS ------------------------------  
 
 
 Sharpe Ratio: 0.18474054151509864  
@@ -26,7 +26,7 @@ Final Portfolio Value: 178512.88
 
 
 using Stoch RSI   
- ------------------------------ ANALYSIS ------------------------------  
+     ------------------------------ ANALYSIS ------------------------------  
 
 
 Sharpe Ratio: 0.3176636824413759  
@@ -50,7 +50,7 @@ Final Portfolio Value: 874147.79
 
 
 using Bollinger Bands    
- ------------------------------ ANALYSIS ------------------------------  
+     ------------------------------ ANALYSIS ------------------------------  
 
 
 Sharpe Ratio: 0.31959245497586675  
@@ -74,10 +74,15 @@ Final Portfolio Value: 488403.03
 
 
 
+
 The repo contains simple strategies backtesting examples using Backtrader in Python.  
 https://www.backtrader.com/docu/quickstart/quickstart/
 
+
+
 The data used is Tatamotars historical data from yahoo finance.  
+
+
 
 I have used 3 simple strategies  
 -RSI  https://www.investopedia.com/terms/r/rsi.asp  
