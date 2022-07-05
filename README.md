@@ -1,7 +1,7 @@
 # Backtest
 
 
-using MACD  
+MACD Crossover  https://www.investopedia.com/trading/macd/      
      ------------------------------ ANALYSIS ------------------------------  
 
 
@@ -25,7 +25,7 @@ moneydown : 28152.988499999978
 Final Portfolio Value: 178512.88  
 
 
-using Stoch RSI   
+Stoch RSI    https://www.investopedia.com/terms/r/rsi.asp  
      ------------------------------ ANALYSIS ------------------------------  
 
 
@@ -49,7 +49,7 @@ moneydown : 944666.9820000001
 Final Portfolio Value: 874147.79  
 
 
-using Bollinger Bands    
+using Bollinger Bands    https://www.investopedia.com/articles/technical/102201.asp  
      ------------------------------ ANALYSIS ------------------------------  
 
 
@@ -83,8 +83,3 @@ https://www.backtrader.com/docu/quickstart/quickstart/
 The data used is Tatamotars historical data from yahoo finance.  
 
 
-
-I have used 3 simple strategies  
--RSI  https://www.investopedia.com/terms/r/rsi.asp  
--Bollinger's Band  https://www.investopedia.com/articles/technical/102201.asp   
--MACD Crossover  https://www.investopedia.com/trading/macd/  
