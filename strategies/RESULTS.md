@@ -1,6 +1,8 @@
 # Results
 
-MACD Crossover  https://www.investopedia.com/trading/macd/      
+# MACD Crossover   
+Moving average convergence divergence (MACD, or MAC-D) is a trend-following momentum indicator that shows the relationship between two exponential moving averages (EMA's) of a security’s price. The MACD is calculated by subtracting the 26-period exponential moving average (EMA) from the 12-period EMA.  
+for more information refer to: https://www.investopedia.com/trading/macd/      
      ------------------------------ ANALYSIS ------------------------------  
 
 
@@ -25,7 +27,9 @@ Final Portfolio Value: 178512.88
 
 
 
-Stoch RSI    https://www.investopedia.com/terms/r/rsi.asp  
+# Stoch RSI    
+The Stochastic RSI (StochRSI) is an indicator used in technical analysis that ranges between zero and one (or zero and 100 on some charting platforms) and is created by applying the Stochastic oscillator formula to a set of relative strength index (RSI) values rather than to standard price data.  
+for more information refer to: https://www.investopedia.com/terms/r/rsi.asp  
      ------------------------------ ANALYSIS ------------------------------  
 
 
@@ -49,7 +53,9 @@ moneydown : 944666.9820000001
 Final Portfolio Value: 874147.79  
 
 
-Bollinger Bands    https://www.investopedia.com/articles/technical/102201.asp  
+# Bollinger Bands    
+A Bollinger Band® is a technical analysis tool defined by a set of trendlines plotted two standard deviations (positively and negatively) away from a simple moving average (SMA) of a security's price, but which can be adjusted to user preferences.  
+for more information refer to: https://www.investopedia.com/articles/technical/102201.asp  
      ------------------------------ ANALYSIS ------------------------------  
 
 
