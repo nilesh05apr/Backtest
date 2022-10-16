@@ -1,15 +1,49 @@
 # Backtest
 
-The repo contains simple strategies backtesting examples using Backtrader in Python.  
-https://www.backtrader.com/docu/quickstart/quickstart/
+Backtesting is a key component of effective trading system development. It is accomplished by reconstructing, with historical data, trades that would have occurred in the past using rules defined by a given strategy. The result offers statistics to gauge the effectiveness of the strategy.   
 
-The data used is Tatamotars historical data from yahoo finance.  
+## Dataset  
 
+The project is built using TATAMOTORS share price data for 20 years  
 
-To run:  
-- git clone 
-- create virtual environment using pipenv or virtualenv
-- install dependencies python3 -m pip install -r requirements.txt
-- cd strategies/
-- python3 <filename.py>
+For custom dataset place the csv file in /data directory and change input_file_path='custom data.csv'
 
+## Run Locally  
+
+Clone the project    
+
+```bash
+  git clone https://github.com/nilesho5apr/Backtest.git
+```
+Go to the project directory  
+
+```bash
+  cd Backtest
+```
+Create virtual enviroment  
+
+```bash
+  virtualenv venv
+```
+
+Install dependencies  
+
+```bash
+  python3 -m pip install -r requirements.txt
+```
+
+Go to the strategies directory  
+
+```bash
+  cd strategies
+```
+
+Run simulations  
+
+```bash
+  python3 <filename.py>
+```
+
+## Documentation  
+
+[Backtrader](https://www.backtrader.com/docu/quickstart/quickstart/)
