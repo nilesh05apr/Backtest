@@ -32,16 +32,11 @@ Install dependencies
   python3 -m pip install -r requirements.txt
 ```
 
-Go to the strategies directory  
-
-```bash
-  cd strategies
-```
 
 Run simulations  
 
 ```bash
-  python3 <filename.py>
+  python3 main.py --arguments
 ```
 
 ## Documentation  
