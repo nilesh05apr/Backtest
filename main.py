@@ -3,6 +3,7 @@ import backtrader as bt
 import strategies.stochrsi as stochrsi
 import strategies.macdCrossover as macdCrossover
 import strategies.bband as bband
+import strategies.adx as adx
 import strategies.utils.util as util
 import backtrader.analyzers as btanalyzers
 
@@ -16,6 +17,8 @@ def main(args):
         cb.addstrategy(macdCrossover.TestStrategy)
     elif args.strategy == 'bband':
         cb.addstrategy(bband.BBandStrategy)
+    elif args.strategy == 'adx':
+        cb.addstrategy(adx.TestStrategy)
     else:
         print('Invalid strategy')
         return
