@@ -76,8 +76,6 @@ if __name__ == '__main__':
     parser.add_argument('--data', type=str, default='data/TATAMOTORS.NS.csv', help='Data to use')
     parser.add_argument('--cash', type=float, default=100000.0, help='Starting cash')
     parser.add_argument('--commission', type=float, default=0.001, help='Commission')
-    parser.add_argument('--sizer', type=str, default='util.Sizer', help='Sizer')
     parser.add_argument('--risk', type=float, default=0.01, help='Risk')
-    parser.add_argument('--plot', type=bool, default=False, help='Plot')
     args = parser.parse_args()
     main(args)
