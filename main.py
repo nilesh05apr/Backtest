@@ -22,7 +22,8 @@ def main(args):
     data = bt.feeds.YahooFinanceCSVData(dataname=args.data)
     cb.adddata(data)
     cb.broker.setcash(args.cash)
-    cb.addsizer(util.Sizer)
+    cb.addsizer(util.Sizer, risk=args.risk)
+    start = cb.broker.getvalue()
     print('Starting Portfolio Value: %.2f' % cb.broker.getvalue())
     cb.addanalyzer(btanalyzers.SharpeRatio, _name='sharpe')
     cb.addanalyzer(btanalyzers.DrawDown, _name='drawdown')
@@ -56,7 +57,11 @@ def main(args):
         else:
             print(k,':',v)
     print('\n')
+    print('-'*30,'END ANALYSIS','-'*30)
+    end = cb.broker.getvalue()
     print('Final Portfolio Value: %.2f' % cb.broker.getvalue())
+    print('Profit: %.2f' % (end - start))
+    print('Profit Percentage: %.2f%%' % ((end - start) / start * 100))
 
 
 
@@ -69,6 +74,7 @@ if __name__ == '__main__':
     parser.add_argument('--cash', type=float, default=100000.0, help='Starting cash')
     parser.add_argument('--commission', type=float, default=0.001, help='Commission')
     parser.add_argument('--sizer', type=str, default='util.Sizer', help='Sizer')
+    parser.add_argument('--risk', type=float, default=0.01, help='Risk')
     parser.add_argument('--plot', type=bool, default=False, help='Plot')
     args = parser.parse_args()
     main(args)

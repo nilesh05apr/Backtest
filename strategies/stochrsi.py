@@ -1,10 +1,3 @@
-from __future__ import (absolute_import, division, print_function,
-                        unicode_literals)
-
-import datetime  # For datetime objects
-import os.path  # To manage paths
-import sys  # To find out the script name (in argv[0])
-
 # Import the backtrader platform
 import backtrader as bt
 import backtrader.analyzers as btanalyzers
@@ -12,9 +5,6 @@ import backtrader.feeds as btfeeds
 import backtrader.strategies as btstrats
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-
 
 
 class StochRSI(bt.Indicator):
@@ -34,18 +24,13 @@ class StochRSI(bt.Indicator):
         self.l.stochrsi = (rsi - minrsi) / (maxrsi - minrsi)
 
 
-
-
-
-
-
 class TestStrategy(bt.Strategy):
 
     def log(self, txt, dt=None):
         ''' Logging function fot this strategy'''
         size = self.getposition().size
         dt = dt or self.datas[0].datetime.date(0)
-        print('%s, %s CURRENT POSITION %s' % (dt.isoformat(), txt, size))
+        print('%s, %s CURRENT POSITION : %s' % (dt.isoformat(), txt, size))
 
     def __init__(self):
         # Keep a reference to the "close" line in the data[0] dataseries
@@ -61,11 +46,11 @@ class TestStrategy(bt.Strategy):
 
 
       if buy_signal:
-        self.log('BUY CREATE AT PRICE , %.2f' % self.dataclose[0])
+        self.log('BUY CREATE AT PRICE : %.2f,' % self.dataclose[0])
         self.buy()
         self.order_exist = True
       elif sell_signal and self.order_exist:
-        self.log('SELL CREATE AT PRICE , %.2f' % self.dataclose[0])
+        self.log('SELL CREATE AT PRICE : %.2f,' % self.dataclose[0])
         self.sell()
         self.order_exist = False
 

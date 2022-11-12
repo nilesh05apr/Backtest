@@ -1,11 +1,3 @@
-from __future__ import (absolute_import, division, print_function,
-                        unicode_literals)
-
-import datetime  # For datetime objects
-import os.path  # To manage paths
-import sys  # To find out the script name (in argv[0])
-
-
 # Import the backtrader platform
 import backtrader as bt
 import backtrader.analyzers as btanalyzers
@@ -24,7 +16,7 @@ class TestStrategy(bt.Strategy):
         if self.params.printlog or doprint:
             dt = dt or self.datas[0].datetime.date(0)
             size = self.getposition().size
-            print('%s, %s CURRENT POSITION %s' % (dt.isoformat(), txt,size))
+            print('%s, %s CURRENT POSITION : %s' % (dt.isoformat(), txt,size))
 
     def __init__(self):
         # Keep a reference to the "close" line in the data[0] dataseries
@@ -79,7 +71,7 @@ class TestStrategy(bt.Strategy):
 
     def next(self):
         # Simply log the closing price of the series from the reference
-        self.log('Close, %.2f' % self.dataclose[0])
+        self.log('Close: %.2f,' % self.dataclose[0])
 
         # Check if an order is pending ... if yes, we cannot send a 2nd one
         if self.order:
@@ -92,7 +84,7 @@ class TestStrategy(bt.Strategy):
             if self.dataclose[0] > self.sma[0]:
 
                 # BUY, BUY, BUY!!! (with all possible default parameters)
-                self.log('BUY CREATE, %.2f' % self.dataclose[0])
+                self.log('BUY CREATE : %.2f,' % self.dataclose[0])
 
                 # Keep track of the created order to avoid a 2nd order
                 self.order = self.buy()
@@ -101,7 +93,7 @@ class TestStrategy(bt.Strategy):
 
             if self.dataclose[0] < self.sma[0]:
                 # SELL, SELL, SELL!!! (with all possible default parameters)
-                self.log('SELL CREATE, %.2f' % self.dataclose[0])
+                self.log('SELL CREATE : %.2f,' % self.dataclose[0])
 
                 # Keep track of the created order to avoid a 2nd order
                 self.order = self.sell()

@@ -1,4 +1,5 @@
 import backtrader as bt
+import math
 
 
 class Sizer(bt.Sizer):
@@ -16,6 +17,6 @@ class Sizer(bt.Sizer):
 
     def _getsizing(self, comminfo, cash, data, isbuy):
         if isbuy:
-            return self.p.risk * cash / data.close[0]
+            return math.floor((cash-(cash*self.p.risk)) / data.close[0])
         else:
             return self.broker.getposition(data).size
