@@ -27,7 +27,7 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       
       # install dependencies
-      - uses: actions/checkout
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
