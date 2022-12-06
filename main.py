@@ -6,6 +6,7 @@ import strategies.bband as bband
 import strategies.adx as adx
 import strategies.utils.util as util
 import backtrader.analyzers as btanalyzers
+import yfinance as yf
 
 
 
@@ -22,7 +23,14 @@ def main(args):
     else:
         print('Invalid strategy')
         return
-    data = bt.feeds.YahooFinanceCSVData(dataname=args.data)
+    if args.data == 'yahoo':
+        data = bt.feeds.YahooFinanceCSVData(dataname=args.data_dir)
+    elif args.data == 'yfinance':
+        data = yf.download(args.ticker, start=args.start, end=args.end)
+        data = bt.feeds.PandasData(dataname=data)
+    else:
+        print('Invalid data')
+        return
     cb.adddata(data)
     cb.broker.setcash(args.cash)
     cb.addsizer(util.Sizer, risk=args.risk)
@@ -73,7 +81,11 @@ def main(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Backtest')
     parser.add_argument('--strategy', type=str, default='stochrsi', help='Strategy to use')
-    parser.add_argument('--data', type=str, default='data/TATAMOTORS.NS.csv', help='Data to use')
+    parser.add_argument('--data', type=str, default='yahoo', help='Data to use')
+    parser.add_argument('--data_dir', type=str, default='data/TATAMOTORS.NS.csv', help='Data directory')
+    parser.add_argument('--ticker', type=str, default='TATAMOTORS.NS', help='Ticker to use')
+    parser.add_argument('--start', type=str, default='2019-01-01', help='Start date')
+    parser.add_argument('--end', type=str, default='2020-01-01', help='End date')
     parser.add_argument('--cash', type=float, default=100000.0, help='Starting cash')
     parser.add_argument('--commission', type=float, default=0.001, help='Commission')
     parser.add_argument('--risk', type=float, default=0.01, help='Risk')
