@@ -49,4 +49,6 @@ jobs:
           pipenv install types-requests --dev
       # run main file
       - name: run main script
-        run: python3 main.py
+        run: |
+          pipenv shell
+          python3 main.py
