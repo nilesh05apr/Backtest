@@ -37,5 +37,4 @@ jobs:
       # run main file
       - name: run main script
         run: |
-          pipenv shell
           python3 main.py
