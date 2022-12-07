@@ -16,7 +16,7 @@ run_checks(){
 
     for startegy in ${strategies[@]}; do
         echo 'running for: '$startegy
-        python3 ../main.py --strategy $startegy --data yfinance --ticker MSFT --start 2017-01-01 --end 2022-01-01 
+        python3 main.py --strategy $startegy --data yfinance --ticker MSFT --start 2017-01-01 --end 2022-01-01 
     done
 
     echo 'Done!'
