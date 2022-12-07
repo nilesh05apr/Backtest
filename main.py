@@ -9,7 +9,6 @@ import backtrader.analyzers as btanalyzers
 import yfinance as yf
 
 
-
 def main(args):
     cb = bt.Cerebro()
     if args.strategy == 'stochrsi':
@@ -73,9 +72,6 @@ def main(args):
     print('Final Portfolio Value: %.2f' % cb.broker.getvalue())
     print('Profit: %.2f' % (end - start))
     print('Profit Percentage: %.2f%%' % ((end - start) / start * 100))
-
-
-
 
 
 if __name__ == '__main__':
