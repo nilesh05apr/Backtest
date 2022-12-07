@@ -38,4 +38,3 @@ jobs:
       - name: run main script
         run: |
           bash ./.github/check.sh
-          python3 main.py
