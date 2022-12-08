@@ -4,6 +4,7 @@ import strategies.stochrsi as stochrsi
 import strategies.macdCrossover as macdCrossover
 import strategies.bband as bband
 import strategies.adx as adx
+import strategies.kdj as kdj
 import strategies.utils.util as util
 import backtrader.analyzers as btanalyzers
 import yfinance as yf
@@ -19,6 +20,8 @@ def main(args):
         cb.addstrategy(bband.BBandStrategy)
     elif args.strategy == 'adx':
         cb.addstrategy(adx.TestStrategy)
+    elif args.strategy == 'kdj':
+        cb.addstrategy(kdj.KDJStrategy)
     else:
         print('Invalid strategy')
         return

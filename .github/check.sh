@@ -12,7 +12,7 @@ pyclean() {
 run_checks(){
     echo 'Running checks...'
 
-    strategies=("stochrsi" "bband" "adx" "macd")
+    strategies=("stochrsi" "bband" "adx" "macd" "kdj")
 
     for startegy in ${strategies[@]}; do
         echo 'running for: '$startegy
