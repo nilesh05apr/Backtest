@@ -38,6 +38,8 @@ def main(args):
         return
     cb.adddata(data)
     cb.broker.setcash(args.cash)
+    cb.broker.setcommission(commission=args.commission)
+    cb.broker.risk = args.risk
     cb.addsizer(util.Sizer, risk=args.risk)
     start = cb.broker.getvalue()
     print('Starting Portfolio Value: %.2f' % cb.broker.getvalue())
