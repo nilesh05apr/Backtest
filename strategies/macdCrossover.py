@@ -8,7 +8,7 @@ import backtrader.strategies as btstrats
 class TestStrategy(bt.Strategy):
     params = (
         ('maperiod', 20),
-        ('printlog', False),
+        ('printlog', True),
     )
 
     def log(self, txt, dt=None, doprint=False):
