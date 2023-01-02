@@ -2,6 +2,7 @@ import argparse
 import backtrader as bt
 import strategies.stochrsi as stochrsi
 import strategies.macdCrossover as macdCrossover
+import strategies.mInd.macdRsi as macdrsi
 import strategies.bband as bband
 import strategies.adx as adx
 import strategies.kdj as kdj
@@ -22,6 +23,8 @@ def main(args):
         cb.addstrategy(adx.TestStrategy)
     elif args.strategy == 'kdj':
         cb.addstrategy(kdj.KDJStrategy)
+    elif args.strategy == 'macdrsi':
+        cb.addstrategy(macdrsi.MACDRSI)
     else:
         print('Invalid strategy')
         return
